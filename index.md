@@ -3,14 +3,18 @@ layout: page
 title: Copperhead
 tagline: Data Parallel Python
 ---
-{% include JB/setup %}
-
+Overview
+--------
 Copperhead is a project to bring data parallelism to Python. We define
 a small functional, data parallel subset of Python, which we then
 dynamically compile and execute on parallel platforms. Currently, we
 target NVIDIA GPUs, as well as multicore CPUs through OpenMP and
 Threading Building Blocks (TBB).
 
+Copperhead is a project of [NVIDIA Research][nvr].
+
+Example
+-------
 Here's a simple Copperhead program:
 {% highlight python %}
 from copperhead import *
@@ -36,5 +40,15 @@ intercepts the call and compiles the function to CUDA and OpenMP,
 respectively. It also converts the input arguments to cuarray
 objects managed by the runtime, which are lazily copied to and from
 heterogeneous memory spaces. The programmer specifies the execution
-place using the with construct above.
+place explicitly. Compilation is cached to minimize runtime overhead.
 
+Contributors
+------------
+
+The primary contributors to Copperhead are [Bryan
+Catanzaro][bcc] and [Michael
+Garland][mjg].
+
+[nvr]: http://research.nvidia.com "NVIDIA Research"
+[bcc]: http://catanzaro.name "Bryan Catanzaro"
+[mjg]: http://mgarland.org "Michael Garland"
