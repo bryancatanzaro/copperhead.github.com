@@ -2,6 +2,7 @@
 layout: page
 title: "Installation"
 description: "Installation"
+categories: top
 ---
 
 Dependencies

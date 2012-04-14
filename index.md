@@ -37,11 +37,11 @@ with places.openmp:
 {% endhighlight %}
 
 
-In this example, when axpy is called, the Copperhead runtime
+In this example, when `axpy` is called, the Copperhead runtime
 intercepts the call and compiles the function to CUDA and OpenMP,
-respectively. It also converts the input arguments to cuarray
+respectively. It also converts the input arguments to `cuarray`
 objects managed by the runtime, which are lazily copied to and from
-heterogeneous memory spaces. The programmer specifies the execution
+heterogeneous memory spaces as needed. The programmer specifies the execution
 place explicitly. Compilation is cached to minimize runtime overhead.
 
 Contributors

@@ -34,14 +34,9 @@
           <a class="brand" href="{{ HOME_PATH }}">cu</a>
           <ul class="nav">
             {% for page in site.pages %}
-            {% case page.title %}
-            {% when 'Pages' %}
-            {% when 'Atom Feed' %}
-            {% when 'Copperhead' %}
-            {% when 'Sitemap' %}
-            {% else %}
+            {% if page.categories contains 'top' %}
             <li><a title="{{ page.title }}" href="{{ page.url }}">{{ page.title }}</a></li>
-            {% endcase %}
+            {% endif %}
             {% endfor %}
           </ul>
         </div>
