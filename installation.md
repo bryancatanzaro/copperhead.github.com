@@ -48,10 +48,8 @@ Windows.
 Tools
 -----
 
-  - g++ version 4.5 or greater.  If you want to build support for the
-CUDA backend, you must use a version of g++ supported by nvcc.  As of
-version 4.1, nvcc does not support versions of g++ newer than 4.5.
-
+  - g++ version 4.5.3 or greater.  If you want to build support for the
+CUDA backend, you must use a version of g++ supported by nvcc.  
   - Scons.
 
 Installation
