@@ -106,6 +106,29 @@ automatically cast to the type of the input `x`.
 You can explicitly cast literals to different types, or to the type of
 other variables, using functions provided in the prelude.
 
+Casting
+-------
+
+To change the type of a scalar, we have some casting functions:
+`int32`, `int64`, `float32`, `float64`, which produce scalars of the
+appropriate type.
+
+We also have two polymorphic cast functions: `cast_to(x, y)`, which
+accepts scalars `x` and `y`, and returns `x` cast to the type of `y`.
+
+Along with `cast_to_el(x, y)`, which accepts scalar `x` and sequence
+`y`, and returns `x` cast to the element type of `y`.
+
+For example `sum` is implemented as
+{%highlight python %}
+@cu
+def sum(x):
+  return reduce(op_add, x, cast_to_el(0, x))
+{%end highlight%}
+
+The `cast_to_el` function allows me to express the type of the default
+prefix `0` in a way that's compatible with the type of `reduce`.
+
 Caveats
 -------
 
