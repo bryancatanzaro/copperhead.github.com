@@ -44,6 +44,12 @@ objects managed by the runtime, which are lazily copied to and from
 heterogeneous memory spaces as needed. The programmer specifies the execution
 place explicitly. Compilation is cached to minimize runtime overhead.
 
+Source
+------
+
+You can download the source here:
+[https://github.com/copperhead/copperhead][github]
+
 Contributors
 ------------
 
@@ -51,6 +57,7 @@ The primary contributors to Copperhead are [Bryan
 Catanzaro][bcc] and [Michael
 Garland][mjg].
 
+[github]: https://github.com/copperhead/copperhead
 [nvr]: http://research.nvidia.com "NVIDIA Research"
 [bcc]: http://catanzaro.name "Bryan Catanzaro"
 [mjg]: http://mgarland.org "Michael Garland"
