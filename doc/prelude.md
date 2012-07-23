@@ -29,11 +29,11 @@ Prelude procedures
 ------------------
 * `map`
 * `reduce`
-    - `sum`
-    - `any`
-    - `all`
-    - `min`
-    - `max`
+  - `sum`
+  - `any`
+  - `all`
+  - `min`
+  - `max`
 * `filter`
 * `zip`, `unzip`
 * `gather`, `scatter`
